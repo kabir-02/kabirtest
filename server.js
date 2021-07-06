@@ -7,12 +7,12 @@ const mysql = require('mysql');
 
 
 
-PORT = 8082;
+PORT = process.env.PORT || 8082;
 
 let db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'password',
+  password: '',
   database: 'funddb'
 });
 
